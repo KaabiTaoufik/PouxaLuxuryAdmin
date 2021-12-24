@@ -1,0 +1,17 @@
+.icon {
+  cursor: pointer;
+  margin: 10px;
+}
+
+.icon:hover {
+  color: blueviolet;
+}
+
+.icon.danger:hover {
+  color: red;
+}
+
+.cell-text {
+  font-size: large;
+  font-family: 400;
+}

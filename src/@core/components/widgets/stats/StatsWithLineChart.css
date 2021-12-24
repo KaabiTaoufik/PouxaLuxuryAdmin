@@ -1,0 +1,7 @@
+.stat-icon {
+  transition: 0.3s ease-in-out;
+}
+
+.stat-icon:hover {
+  transform: translateY(-5px);
+}

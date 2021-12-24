@@ -31,7 +31,7 @@ const UserDropdown = () => {
 
   //** Vars
   //const userAvatar = (userData && userData.avatar) || defaultAvatar
-  const userName = (userData && userData['username']) || 'Admin'
+  const userName = (userData && userData['username']) || 'Pouxa Admin'
 
   return (
     <UncontrolledDropdown tag='li' className='dropdown-user nav-item'>
@@ -40,7 +40,7 @@ const UserDropdown = () => {
           <span className='user-name fw-bold'>{userName}</span>
           <span className='user-status'>{(userData && userData.role) || 'Admin'}</span>
         </div>
-        <Avatar  initials={true} content={userName} color={"light-success"} />
+        <Avatar  initials content={userName} contentStyles={ { height:40, width:40 } } color={"light-success"} />
       </DropdownToggle>
       <DropdownMenu end>
         <DropdownItem tag='a' href='/pages/profile' onClick={e => e.preventDefault()}>

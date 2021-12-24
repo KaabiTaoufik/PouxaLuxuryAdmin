@@ -1,6 +1,6 @@
-import { Mail, Home, Globe, ShoppingCart, Circle } from 'react-feather'
+import { Mail, Home, Globe, ShoppingCart, PieChart, Shield } from 'react-feather'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faTshirt, faTh } from '@fortawesome/free-solid-svg-icons'
+import {  faTshirt, faTh, faChartLine } from '@fortawesome/free-solid-svg-icons'
 
 export default [
   {
@@ -10,7 +10,7 @@ export default [
     id: 'home',
     title: 'Page d\'acceuil',
     icon: <Home size={20} />,
-    navLink: '/home'
+    navLink: '/acceuil'
   },
   {
     id: 'website',
@@ -26,47 +26,45 @@ export default [
   {
     id: 'Commandes',
     title: 'Commandes',
-    icon: <ShoppingCart size={20} />
+    icon: <ShoppingCart size={20} />,
+    navLink: '/commandes'
   },
   {
     id: 'Produits',
     title: 'Produits',
     icon: <FontAwesomeIcon icon={faTshirt}/>,
-    children: [
-      {
-        id: 'ProductList',
-        title: 'Liste des produits',
-        icon: <Circle size={12} />
-      },
-      {
-        id: 'ProductGrid',
-        title: 'Grille des produits',
-        icon: <Circle size={12} />
-      },
-      {
-        id: 'CommandesList',
-        title: 'Liste des commandes',
-        icon: <Circle size={12} />
-      }
-    ]
+    navLink: '/produits'
   },
   {
     id: 'Categories',
     title: 'Catégories',
-    icon: <FontAwesomeIcon icon={faTh}/>
+    icon: <FontAwesomeIcon icon={faTh}/>,
+    navLink: '/categories'
     
   },
   {
     header: "Statistiques"
   },
   {
-    id: 'secondPage',
-    title: 'Second Page',
-    icon: <Mail size={20} />,
-    navLink: '/second-page'
+    id: 'UsersStats',
+    title: 'Audience',
+    icon: <FontAwesomeIcon icon={faChartLine}/>,
+    navLink: '/stats/audience'
   },
   {
-    header: "Utilisateurs et roles"
+    id: 'ProductsStats',
+    title: 'Produits & Achats',
+    icon: <PieChart size={20} />,
+    navLink: '/stats/shop'
+  },
+  {
+    header: "Contrôle d\'accés"
+  },
+  {
+    id: 'Users',
+    title: 'Rôles & Autorisation',
+    icon: <Shield size={20} />,
+    navLink: '/utilisateurs'
   },
   {
     id: 'secondPage',
