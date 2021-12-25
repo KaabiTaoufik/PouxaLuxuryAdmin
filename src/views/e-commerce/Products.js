@@ -2,6 +2,8 @@
 import Breadcrumbs from '@components/breadcrumbs'
 
 const Products = () => {
+
+
   return (
     <>
       <Breadcrumbs 
@@ -9,7 +11,6 @@ const Products = () => {
         breadCrumbParent='E-commerce' 
         breadCrumbActive='Produits' 
       />
- 
     </>
   )
 }

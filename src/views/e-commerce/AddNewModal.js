@@ -36,31 +36,6 @@ const AddNewModal = ({ open, handleModal }) => {
           </InputGroup>
         </div>
         <div className='mb-1'>
-          <Label className='form-label' >
-            genres :
-          </Label>
-          <InputGroup>
-          <div className='form-check form-check-inline'>
-            <Input type='checkbox'  id='homme' />
-              <Label for='homme' value="Homme" className='form-check-label'>
-                Homme
-              </Label>
-              </div>
-              <div className='form-check form-check-inline'>
-              <Input type='checkbox'  id='femme' />
-              <Label for='femme' value="Femme" className='form-check-label'>
-              {" "}Femme{" "}
-              </Label>
-              </div>
-              <div className='form-check form-check-inline'>
-              <Input type='checkbox' value="Enfant"  id='enfant' />
-              <Label for='enfant' className='form-check-label'>
-              {" "}Enfant{" "}
-              </Label>
-              </div>
-          </InputGroup>
-        </div>
-        <div className='mb-1'>
           <Label className='form-label' for='visibility'>
             Visibilité :
           </Label>

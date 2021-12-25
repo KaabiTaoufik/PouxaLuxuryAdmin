@@ -26,7 +26,7 @@ const NewOrders = () => {
         <Table responsive>
             <thead>
                 <tr>
-                    <th>id</th>
+                    <th style={{padding:'10px 20px'}}>id</th>
                     <th>Client</th>
                     <th>num° tel</th>
                     <th>Actions</th>

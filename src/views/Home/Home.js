@@ -10,6 +10,7 @@ import NewOrders from "@src/views/ui-elements/NewOrders"
 // ** Styles
 import "@styles/react/libs/charts/apex-charts.scss"
 
+
 const Home = () => {
   return (
     <div id="home-page">

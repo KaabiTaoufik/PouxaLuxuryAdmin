@@ -1,4 +1,4 @@
-import { Mail, Home, Globe, ShoppingCart, PieChart, Shield } from 'react-feather'
+import { Home, Globe, ShoppingCart, PieChart, Shield } from 'react-feather'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faTshirt, faTh, faChartLine } from '@fortawesome/free-solid-svg-icons'
 
@@ -58,18 +58,12 @@ export default [
     navLink: '/stats/shop'
   },
   {
-    header: "Contrôle d\'accés"
+    header: "Contrôle d\'accs"
   },
   {
     id: 'Users',
     title: 'Rôles & Autorisation',
     icon: <Shield size={20} />,
     navLink: '/utilisateurs'
-  },
-  {
-    id: 'secondPage',
-    title: 'Second Page',
-    icon: <Mail size={20} />,
-    navLink: '/second-page'
   }
 ]
