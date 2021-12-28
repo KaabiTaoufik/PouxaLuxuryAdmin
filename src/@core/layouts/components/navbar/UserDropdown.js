@@ -5,12 +5,11 @@ import { useState } from 'react'
 // ** Custom Components
 import Avatar from '@components/avatar'
 
-
 // ** Utils
 // import { isUserLoggedIn } from '@utils'
 
 // ** Third Party Components
-import { User, Settings, Power } from 'react-feather'
+import { User, Settings, Power, Sun, Moon } from 'react-feather'
 
 // ** Reactstrap Imports
 import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from 'reactstrap'
@@ -18,9 +17,35 @@ import { UncontrolledDropdown, DropdownMenu, DropdownToggle, DropdownItem } from
 // ** Default Avatar Image
 //import defaultAvatar from '@src/assets/images/avatars/avatar-blank.png'
 
-const UserDropdown = () => {
+const UserDropdown = props => {
   // ** State
   const [userData] = useState(null)
+  const {skin, setSkin}  = props
+
+  // ** Function to toggle Theme (Light/Dark)
+  const changeTheme = () => {
+    if (skin === 'dark') setSkin('light')
+    else setSkin('dark')
+  }
+
+
+  const ThemeToggler = () => {
+    if (skin === 'dark') {
+      return (
+        <>
+          <Sun className='ficon me-75'/>
+          <span className='align-middle'>Light mode</span>
+        </>
+      )
+    } else {
+      return (
+        <>
+          <Moon className='ficon me-75' />
+          <span className='align-middle'>Dark mode</span>
+        </>
+      )
+    }
+  }
 
   //** ComponentDidMount
   // useEffect(() => {
@@ -50,6 +75,9 @@ const UserDropdown = () => {
         <DropdownItem tag='a' href='/pages/account-settings' onClick={e => e.preventDefault()}>
           <Settings size={14} className='me-75' />
           <span className='align-middle'>Settings</span>
+        </DropdownItem>
+        <DropdownItem tag='div' onClick={changeTheme}>
+          <ThemeToggler />
         </DropdownItem>
         <DropdownItem divider />
         <DropdownItem tag={Link} to='/login'>

@@ -92,6 +92,7 @@ const TopSellingItems = (/*{ products }*/) => {
         )
       })
     }
+    return <p>il n'y a pas encore de commandes</p>
   }
   
   return (

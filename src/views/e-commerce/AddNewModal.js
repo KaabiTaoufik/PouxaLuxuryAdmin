@@ -1,5 +1,5 @@
-// ** Third Party Components
-import { User, Briefcase, DollarSign, X } from 'react-feather'
+import { User, X, Moon, Sun } from 'react-feather'
+import IconSwitch from '../ui-elements/Form/IconSwitch'
 
 // ** Reactstrap Imports
 import { Modal, Input, Label, Button, ModalHeader, ModalBody, InputGroup, InputGroupText, Form} from 'reactstrap'
