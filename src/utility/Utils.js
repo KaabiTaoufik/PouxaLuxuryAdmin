@@ -7,6 +7,14 @@ export const kFormatter = num => (num > 999 ? `${(num / 1000).toFixed(1)}k` : nu
 // ** Converts HTML to string
 export const htmlToString = html => html.replace(/<\/?[^>]+(>|$)/g, '')
 
+// ** Compare objects by fields
+export const areEqual = (obj1, obj2) => {
+  Object.keys(obj1).forEach(key => {
+    if (obj1[key] !== obj2[key]) return  false
+  })
+  return true
+}
+
 // ** Checks if the passed date is today
 const isToday = date => {
   const today = new Date()

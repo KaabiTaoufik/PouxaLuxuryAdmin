@@ -1,5 +1,6 @@
 import { Card, CardBody, Button, CardHeader, CardTitle, Table} from 'reactstrap'
 import { Link } from "react-router-dom"
+import classes from './NewOrders.module.css'
 
 const NewOrders = () => {
 
@@ -10,12 +11,12 @@ const NewOrders = () => {
             numTel: 123456789
         },
         {
-            id: "1",
+            id: "2",
             client: {name: "mohamed"},
             numTel: 1235678
         },        
         {
-            id: "1",
+            id: "3",
             client: {name: "mohamed"},
             numTel: 12345678
         }
@@ -57,7 +58,7 @@ const NewOrders = () => {
     <Card className="card-new-orders">
         <CardHeader>
             <Link to='/commandes' style={{cursor: "pointer" }}>
-                <CardTitle tag="h4">
+                <CardTitle tag="h3" className={classes['card-title']}>
                     Nouvelles commandes
                 </CardTitle>
             </Link>

@@ -80,7 +80,7 @@ const UserDropdown = props => {
           <ThemeToggler />
         </DropdownItem>
         <DropdownItem divider />
-        <DropdownItem tag={Link} to='/login'>
+        <DropdownItem tag={Link} to='/'>
           <Power size={14} className='me-75' />
           <span className='align-middle'>Logout</span>
         </DropdownItem>

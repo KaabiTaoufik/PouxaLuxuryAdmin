@@ -1,16 +1,25 @@
+.card-title {
+  font-size: 1.5rem !important;
+}
+
+.top-selling-items {
+  margin-top: 15px;
+}
+
 .top-selling-item,
 .top-selling-item .item-wrapper {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
   align-items: stretch;
+  min-width: 0;
 }
 
 .top-selling-item {
   width: 100%;
   margin-bottom: 20px;
   justify-content: space-between;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .top-selling-item:hover {
@@ -18,7 +27,15 @@
 }
 
 .item-wrapper .item-desc {
-  width: 150px;
+  width: 170px;
+}
+
+.item-wrapper .item-desc .item-name h4 {
+  display: inline-block;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .top-selling-item .item-img {
@@ -69,21 +86,11 @@
 
 .text-body:hover {
   color: blueviolet;
+  transition: color 0.2s ease-in;
 }
 
-@media (max-width: 1270px) and (min-width: 1200px) {
-  .price-wrapper .price {
-    font-size: 21px;
-  }
-  .price-wrapper .devise {
-    font-size: 13px;
-  }
-  .details-wrapper .details button {
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 600px) and (min-width: 580px) {
+@media (max-width: 1270px) and (min-width: 1200px),
+  (max-width: 600px) and (min-width: 580px) {
   .price-wrapper .price {
     font-size: 21px;
   }

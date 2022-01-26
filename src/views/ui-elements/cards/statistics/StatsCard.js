@@ -67,7 +67,7 @@ const StatsCard = ({ cols }) => {
   return (
     <Card className='card-statistics'>
       <CardHeader>
-        <CardTitle tag='h4'>Statistiques</CardTitle>
+        <CardTitle tag='h3' className={classes['card-title']}>Statistiques</CardTitle>
       </CardHeader>
       <CardBody className={classnames({[classes["stat-list-col"]]: true}, 'statistics-body')}>
         <Row className={classes["stat-list"]}>{renderData()}</Row>

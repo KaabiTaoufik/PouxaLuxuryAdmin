@@ -1,0 +1,36 @@
+.img-preview {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border: 1px dashed #bbb;
+}
+
+.img-preview:hover {
+  opacity: 0.6;
+  transition: 0.2s ease-in;
+}
+
+.hide {
+  display: none;
+}
+
+.preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.add-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  font-family: calibri;
+  text-align: center;
+  background-color: #ddd;
+}
