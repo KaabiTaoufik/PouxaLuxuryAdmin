@@ -1,8 +1,8 @@
 import {useState, useRef} from 'react'
 import classes from './InputPreview.module.css'
-import {Image, Trash} from 'react-feather'
+import {Image} from 'react-feather'
 
-const InputPreview = ({imageSrc}) => {
+const InputPreview = ({inputName, imageSrc}) => {
 
     const [hasImage, setHasImage] = useState(imageSrc)
     const inputRef = useRef()
@@ -31,7 +31,7 @@ const InputPreview = ({imageSrc}) => {
             </div>
             <input 
                 ref={inputRef} 
-                name='image' 
+                name={inputName} 
                 accept='image/*' 
                 onChange={handleUpload} 
                 type='file' 

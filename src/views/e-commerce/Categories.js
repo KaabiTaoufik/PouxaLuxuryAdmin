@@ -13,7 +13,7 @@ import { handleOnSubmit } from "./CategoriesAlerts"
 // ** Third Party Components
 import {Row, Col, Card, Input, Label, Button, CardHeader, CardTitle} from "reactstrap"
 import DataTable from "react-data-table-component"
-import { ChevronDown, Plus, Eye, EyeOff, Edit, Trash } from "react-feather"
+import { ChevronDown, Plus } from "react-feather"
 // ** Styles
 import "@styles/react/libs/tables/react-dataTable-component.scss"
 import "animate.css/animate.css"

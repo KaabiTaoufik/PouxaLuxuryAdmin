@@ -77,7 +77,7 @@ const CategoryModal = ({open, handleModal, edit, category, onSubmit}) => {
               <Label className='form-label fw-bolder' style={LabelSizeStyle} for='image'>
                 Image de la catégorie
               </Label>
-              <InputPreview {...(category ? {imageSrc: image} : {})}/>
+              <InputPreview {...(category ? {imageSrc: image} : {})} inputName='image'/>
             </Col>
             <Col className='text-center mt-1' xs={12}>
               <Button type='submit' className='me-1' color='primary'>
