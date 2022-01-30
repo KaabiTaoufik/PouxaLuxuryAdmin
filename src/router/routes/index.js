@@ -10,35 +10,31 @@ const DefaultRoute = '/acceuil'
 const Routes = [
   {
     path: '/acceuil',
-    component: lazy(() => import('../../views/Home/Home'))
-  },
-  {
-    path: '/second-page',
-    component: lazy(() => import('../../views/SecondPage'))
+    component: lazy(() => import('../../views/Home/'))
   },
   {
     path: '/commandes',
-    component: lazy(() => import('../../views/e-commerce/Orders'))
+    component: lazy(() => import('../../views/e-commerce/Orders/'))
   },
   {
     path: '/produits',
-    component: lazy(() => import('../../views/e-commerce/Products'))
+    component: lazy(() => import('../../views/e-commerce/Products/'))
   },
   {
     path: '/categories',
-    component: lazy(() => import('../../views/e-commerce/Categories'))
+    component: lazy(() => import('../../views/e-commerce/Categories/'))
   },
   {
     path: '/stats/audience',
-    component: lazy(() => import('../../views/stats/Audience'))
+    component: lazy(() => import('../../views/stats/Audience/'))
   },
   {
     path: '/stats/shop',
-    component: lazy(() => import('../../views/stats/Shop'))
+    component: lazy(() => import('../../views/stats/Shop/'))
   },
   {
     path: '/utilisateurs',
-    component: lazy(() => import('../../views/access-control/Users'))
+    component: lazy(() => import('../../views/access-control/Users/'))
   },
   {
     path: '/login',

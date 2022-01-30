@@ -2,7 +2,7 @@ import {useState, useRef} from 'react'
 import classes from './InputPreview.module.css'
 import {Image} from 'react-feather'
 
-const InputPreview = ({inputName, imageSrc}) => {
+const InputPreview = ({inputName, imageSrc, onChange}) => {
 
     const [hasImage, setHasImage] = useState(imageSrc)
     const inputRef = useRef()
@@ -22,7 +22,12 @@ const InputPreview = ({inputName, imageSrc}) => {
     return (
         <div className={classes['img-input']}>
             <div className={classes['img-preview']} onClick={fireClick}>
-                <img className={`${!imageSrc && classes["hide"]} ${classes["preview"]}`} ref={previewRef} src={imageSrc ? imageSrc : "#"} alt="preview image"/>
+                <img 
+                    className={`${!imageSrc && classes["hide"]} ${classes["preview"]}`} 
+                    crossOrigin="anonymous" ref={previewRef} 
+                    src={imageSrc ? imageSrc : "#"} 
+                    alt="preview image"
+                />
                 {!hasImage &&  
                     <div className={classes['add-img']}>
                         <Image size={60}/><br/> + Ajouter une image
@@ -33,7 +38,7 @@ const InputPreview = ({inputName, imageSrc}) => {
                 ref={inputRef} 
                 name={inputName} 
                 accept='image/*' 
-                onChange={handleUpload} 
+                onChange={ () => { handleUpload(); onChange(previewRef.current.src) }}
                 type='file' 
                 hidden
             />

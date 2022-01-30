@@ -8,6 +8,13 @@ export const useHttp = () => {
 
   const sendRequest = useCallback(
     async (url, method = 'GET', body = null, headers = {}) => {
+
+      //const methodsWithBody = ["post", "POST", "put", "PUT", "patch", "PATCH"] 
+
+      /*if (methodsWithBody.includes(method)) {
+        headers = {"Content-Type": "application/json"}
+      }*/
+
       setIsLoading(true)
       const httpAbortCtrl = new AbortController()
       activeHttpRequests.current.push(httpAbortCtrl)
@@ -19,8 +26,10 @@ export const useHttp = () => {
           headers,
           signal: httpAbortCtrl.signal
         })
+        console.log(response)
 
         const responseData = await response.json()
+        console.log(responseData)
 
         activeHttpRequests.current = activeHttpRequests.current.filter(
           reqCtrl => reqCtrl !== httpAbortCtrl
@@ -32,10 +41,11 @@ export const useHttp = () => {
 
         setIsLoading(false)
         return responseData
-      } catch (err) {
-        setError(err.message)
+      } catch (error) {
+        console.log(error.message)
+        setError(error.message)
         setIsLoading(false)
-        throw err
+        throw error
       }
     },
     []

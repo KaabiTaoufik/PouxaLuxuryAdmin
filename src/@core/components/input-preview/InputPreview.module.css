@@ -4,7 +4,6 @@
   height: 150px;
   cursor: pointer;
   -webkit-border-radius: 5px;
-  border: 1px dashed #bbb;
 }
 
 .img-preview:hover {
@@ -18,8 +17,8 @@
 
 .preview {
   position: relative;
-  width: 100%;
-  height: 100%;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .add-img {
