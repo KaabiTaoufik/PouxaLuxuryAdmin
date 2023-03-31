@@ -20,7 +20,7 @@
   "1 Column": "1 colonne",
   "2 Columns": "2 colonnes",
   "Fixed Navbar": "Barre de navigation fixe",
-  "Floating Navbar": "Barre de navigation flottante",
+  "Floating Navbar": "Barre de navigation flottante",// Taoufik : best practice is to use underscore instead of spaces in the keys so floating_navbar
   "Fixed Layout": "Mise en page fixe",
   "Static Layout": "Disposition statique",
   "Dark Layout": "Mise en page sombre",
